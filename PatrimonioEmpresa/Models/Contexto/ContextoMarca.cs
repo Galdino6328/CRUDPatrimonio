@@ -7,14 +7,13 @@ using System.Threading.Tasks;
 
 namespace PatrimonioEmpresa.Models.Contexto
 {
-    public class Contexto : DbContext
+    public class ContextoMarca : DbContext
     {
-        public Contexto(DbContextOptions<Contexto> option) : base(option)
+        public ContextoMarca(DbContextOptions<ContextoMarca> option) : base(option)
         {
             Database.EnsureCreated();
         }
-        
-        public DbSet<Patrimonio> Patrimonio { get; set; }
+
         public DbSet<Marca> Marca { get; set; }
     }
 }

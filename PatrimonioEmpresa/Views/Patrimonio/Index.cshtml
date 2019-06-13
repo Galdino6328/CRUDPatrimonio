@@ -24,6 +24,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Tipo)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tombo)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -45,15 +48,21 @@
                     <label>Fisicos</label>
                 }
                 else
-                 if (item.Tipo == 2)
+                if (item.Tipo == 2)
                 {
                     <label>Não Fisicos</label>
                 }
                 else
-                 if (item.Tipo == 3)
+                if (item.Tipo == 3)
                 {
                     <label>Abstratos</label>
                 }
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.Tombo)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.Tombo)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.Id /* id=item.PrimaryKey */ }) |

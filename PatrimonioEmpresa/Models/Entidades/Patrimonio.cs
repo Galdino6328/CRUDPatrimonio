@@ -10,7 +10,7 @@ namespace PatrimonioEmpresa.Models.Entidades
     [Table("Patrimonio")]
     public class Patrimonio
     {
-        //Marca ID
+        //Patrimonio ID
         [Display(Description = "Identifição")]
         public int Id { get; set; }
 
@@ -27,21 +27,9 @@ namespace PatrimonioEmpresa.Models.Entidades
         public int Tipo { get; set; }
 
         //Número do Tombo
-        //[Display(Description = "Número do Tombo")]
-        //public int tombo { get; set; }
+        [Display(Description = "Número do Tombo")]
+        public int Tombo { get; set; }
         
     }
 
-    [Table("Marca")]
-    public class Marca
-    {
-        //Marca ID
-        [Display(Description = "Identifição")]
-        public int Id { get; set; }
-
-        //Nome do Objeto
-        [Display(Description = "Nome do Objeto")]
-        public String Nome { get; set; }
-
-    }
 }

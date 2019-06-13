@@ -38,15 +38,21 @@
                 <label>Fisicos</label>
             }
             else
-              if (Model.Tipo == 2)
+             if (Model.Tipo == 2)
             {
                 <label>Não Fisicos</label>
             }
             else
-              if (Model.Tipo == 3)
+             if (Model.Tipo == 3)
             {
                 <label>Abstratos</label>
             }
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tombo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tombo)
         </dd>
     </dl>
     

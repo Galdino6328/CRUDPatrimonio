@@ -32,7 +32,7 @@
             @Html.DisplayNameFor(model => model.Tipo)
         </dt>
         <dd>
-           @if (Model.Tipo == 1)
+            @if (Model.Tipo == 1)
             {
                 <label>Fisicos</label>
             }
@@ -46,6 +46,12 @@
             {
                 <label>Abstratos</label>
             }
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tombo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tombo)
         </dd>
     </dl>
 </div>
