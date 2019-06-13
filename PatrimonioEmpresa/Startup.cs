@@ -32,7 +32,7 @@ namespace PatrimonioEmpresa
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
+            //CONECCAO COM O BANCO DE DADOS SQL SERVER
             services.AddDbContext<Contexto>(option => option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
@@ -58,8 +58,8 @@ namespace PatrimonioEmpresa
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Patrimonio}/{action=Index}/{id?}");
+                name: "default",
+                template: "{controller=Patrimonio}/{action=Index}/{id?}");
             });
         }
     }

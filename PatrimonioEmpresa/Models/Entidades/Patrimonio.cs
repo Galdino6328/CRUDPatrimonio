@@ -31,4 +31,17 @@ namespace PatrimonioEmpresa.Models.Entidades
         //public int tombo { get; set; }
         
     }
+
+    [Table("Marca")]
+    public class Marca
+    {
+        //Marca ID
+        [Display(Description = "Identifição")]
+        public int Id { get; set; }
+
+        //Nome do Objeto
+        [Display(Description = "Nome do Objeto")]
+        public String Nome { get; set; }
+
+    }
 }
