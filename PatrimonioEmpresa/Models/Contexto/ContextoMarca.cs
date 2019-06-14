@@ -13,7 +13,6 @@ namespace PatrimonioEmpresa.Models.Contexto
         {
             Database.EnsureCreated();
         }
-
         public DbSet<Marca> Marca { get; set; }
     }
 }

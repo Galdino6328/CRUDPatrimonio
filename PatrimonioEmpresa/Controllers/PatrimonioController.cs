@@ -40,7 +40,6 @@ namespace PatrimonioEmpresa.Controllers
             {
                 _contexto.Patrimonio.Add(patrimonio);
                 _contexto.SaveChanges();
-
                 return RedirectToAction("Index");
             }
 
@@ -52,7 +51,6 @@ namespace PatrimonioEmpresa.Controllers
         public IActionResult Edit(int Id)
         {
             var patrimonio = _contexto.Patrimonio.Find(Id);
-
             CarregaTipoPatrimonio();
             return View(patrimonio);
         }
@@ -64,7 +62,6 @@ namespace PatrimonioEmpresa.Controllers
             {
                 _contexto.Patrimonio.Update(patrimonio);
                 _contexto.SaveChanges();
-
                 return RedirectToAction("Index");
             }
             else
@@ -90,7 +87,6 @@ namespace PatrimonioEmpresa.Controllers
             {
                 _contexto.Patrimonio.Remove(patrimonio);
                 _contexto.SaveChanges();
-
                 return RedirectToAction("Index");
             }
             return View(patrimonio);
@@ -118,7 +114,5 @@ namespace PatrimonioEmpresa.Controllers
 
             ViewBag.TiposPatrimonio = ItensTipoPatrimonio;
         }
-
     }
-
 }

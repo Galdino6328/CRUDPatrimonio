@@ -20,7 +20,6 @@ namespace PatrimonioEmpresa.Controllers
         public IActionResult Index()
         {
             var lista = _contextoM.Marca.ToList();
-            //CarregaTipoPatrimonio();
             return View(lista);
         }
 
@@ -28,7 +27,6 @@ namespace PatrimonioEmpresa.Controllers
         public IActionResult Create()
         {
             var marca = new Marca();
-            //CarregaTipoPatrimonio();
             return View(marca);
         }
 
@@ -42,8 +40,6 @@ namespace PatrimonioEmpresa.Controllers
 
                 return RedirectToAction("Index");
             }
-
-            //CarregaTipoPatrimonio();
             return View(marca);
         }
 
@@ -51,8 +47,6 @@ namespace PatrimonioEmpresa.Controllers
         public IActionResult Edit(int Id)
         {
             var marca = _contextoM.Marca.Find(Id);
-
-            //CarregaTipoPatrimonio();
             return View(marca);
         }
 
@@ -63,12 +57,10 @@ namespace PatrimonioEmpresa.Controllers
             {
                 _contextoM.Marca.Update(marca);
                 _contextoM.SaveChanges();
-
                 return RedirectToAction("Index");
             }
             else
             {
-                //CarregaTipoPatrimonio();
                 return View(marca);
             }
         }
@@ -77,7 +69,6 @@ namespace PatrimonioEmpresa.Controllers
         public IActionResult Delete(int Id)
         {
             var marca = _contextoM.Marca.Find(Id);
-            //CarregaTipoPatrimonio();
             return View(marca);
         }
 
@@ -88,7 +79,6 @@ namespace PatrimonioEmpresa.Controllers
             {
                 _contextoM.Marca.Remove(marca);
                 _contextoM.SaveChanges();
-
                 return RedirectToAction("Index");
             }
             return View(marca);
@@ -98,9 +88,7 @@ namespace PatrimonioEmpresa.Controllers
         public IActionResult Details(int Id)
         {
             var marca = _contextoM.Marca.Find(Id);
-            // CarregaTipoPatrimonio();
             return View(marca);
         }
-
     }
 }
